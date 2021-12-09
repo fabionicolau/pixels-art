@@ -36,9 +36,15 @@ main {
   margin: 20px auto;
 }
 
-#clear-board {
+#board-size {
+  background-color: white;
+  color: black;
+}
+.nav-buttons {
   background-color: #0d9678;
   color: white;
+  margin: 5px;
+  padding: 5px;
 }
 
 #pixel-board,

@@ -21,7 +21,17 @@
         </ul>
       </section>
       <nav id="nav-box">
-        <button id="clear-board" class="button">Limpar</button>
+        <input
+          type="number"
+          name="number"
+          id="board-size"
+          class="nav-buttons"
+          min="5"
+          max="50"
+          placeholder="num"
+        />
+        <button id="generate-board" class="nav-buttons">VQV</button>
+        <button id="clear-board" class="nav-buttons">Limpar</button>
       </nav>
       <section>
         <ul id="pixel-board" class="board">

@@ -1,12 +1,20 @@
+function randomColors() {
+  const red = Math.round(Math.random() * 255);
+  const green = Math.round(Math.random() * 255);
+  const blue = Math.round(Math.random() * 255);
+  const rgb = `rgb(${red},${green},${blue})`;
+  return rgb;
+}
+
 const initialColor = document.getElementsByClassName('color')[0];
 initialColor.classList.add('selected');
 
 function colorPalette() {
   const colors = document.getElementsByClassName('color');
   colors[0].style.backgroundColor = 'rgb(0,0,0)';
-  colors[1].style.backgroundColor = 'red';
-  colors[2].style.backgroundColor = 'blue';
-  colors[3].style.backgroundColor = 'green';
+  for (let i = 1; i < colors.length; i += 1) {
+    colors[i].style.backgroundColor = randomColors();
+  }
 }
 colorPalette();
 
@@ -34,8 +42,8 @@ function paintingbox() {
       event.target.style.backgroundColor = selectedColor;
     }
   }
-  for (let index = 0; index < pixelBox.length; index += 1) {
-    pixelBox[index].addEventListener('click', clickPaint);
+  for (let i = 0; i < pixelBox.length; i += 1) {
+    pixelBox[i].addEventListener('click', clickPaint);
   }
 }
 paintingbox();
@@ -44,11 +52,10 @@ function eraseAll() {
   const eraseButton = document.getElementById('clear-board');
   function eraseClick() {
     const pixelBox = document.getElementsByClassName('pixel');
-    for (let index = 0; index < pixelBox.length; index += 1) {
-      pixelBox[index].style.backgroundColor = 'rgb(255,255,255)';
+    for (let i = 0; i < pixelBox.length; i += 1) {
+      pixelBox[i].style.backgroundColor = 'rgb(255,255,255)';
     }
   }
   eraseButton.addEventListener('click', eraseClick);
 }
-
 eraseAll();
