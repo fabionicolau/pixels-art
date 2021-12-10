@@ -36,10 +36,10 @@ function generateBoard(quadros) {
   const pixelBoard = document.getElementById('pixel-board');
   for (let linhas = 0; linhas < quadros; linhas += 1) {
     const linhaUL = document.createElement('ul');
+    linhaUL.classList.add('board');
     for (let colunas = 0; colunas < quadros; colunas += 1) {
       const colunaLI = document.createElement('li');
       colunaLI.classList.add('pixel');
-      colunaLI.style.backgroundColor = 'rgb(255, 255, 255)';
       linhaUL.appendChild(colunaLI);
     }
     pixelBoard.appendChild(linhaUL);
