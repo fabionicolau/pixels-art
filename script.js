@@ -1,3 +1,4 @@
+// Referência: https://stackoverflow.com/questions/23095637/how-do-you-get-random-rgb-in-javascript
 function randomColors() {
   const red = Math.round(Math.random() * 255);
   const green = Math.round(Math.random() * 255);
@@ -16,6 +17,7 @@ function colorPalette() {
 }
 colorPalette();
 
+// Referência: https://gomakethings.com/attaching-multiple-elements-to-a-single-event-listener-in-vanilla-js/
 function selectingColor() {
   const color = document.getElementsByClassName('color');
   function selectedColor(event) {
@@ -75,6 +77,7 @@ function generateBoardButton() {
 }
 generateBoardButton();
 
+// Referência: https://gomakethings.com/attaching-multiple-elements-to-a-single-event-listener-in-vanilla-js/
 function paintingbox() {
   function clickPaint(event) {
     const selectedColor = document.querySelector('.selected').style.backgroundColor;
