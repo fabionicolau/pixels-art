@@ -24,8 +24,8 @@ function selectingColor() {
     for (let i = 0; i < color.length; i += 1) {
       if (event.target.classList.contains('color')) {
         color[i].classList.remove('selected');
+        event.target.classList.add('selected');
       }
-      event.target.classList.add('selected');
     }
   }
   for (let i = 0; i < color.length; i += 1) {
